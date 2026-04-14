@@ -76,11 +76,14 @@ class Blockchain:
         if price_info:
             transaction["price_info"] = price_info
             
-        # Track product through supply chain
+        # Track product through supply chain with full transaction details
         if product_id not in self.product_tracking:
             self.product_tracking[product_id] = []
         self.product_tracking[product_id].append({
+            "product_id": product_id,
             "role": role,
+            "details": details,
+            "price_info": price_info,
             "timestamp": transaction["timestamp"],
             "estimated_delivery": est_delivery
         })
