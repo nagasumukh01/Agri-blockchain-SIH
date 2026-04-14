@@ -123,7 +123,29 @@ class Blockchain:
         
     def get_product_journey(self, product_id):
         """Get the complete journey of a product through the supply chain"""
-        return self.product_tracking.get(product_id, [])
+        journey = self.product_tracking.get(product_id, [])
+
+        # If stored product_tracking is old or incomplete, reconstruct from chain transactions
+        if not journey or any('details' not in entry for entry in journey):
+            reconstructed = []
+            for block in self.chain:
+                for transaction in block.get('transactions', []):
+                    if transaction.get('product_id') == product_id:
+                        reconstructed.append({
+                            'product_id': transaction.get('product_id'),
+                            'role': transaction.get('role'),
+                            'details': transaction.get('details', {}),
+                            'price_info': transaction.get('price_info', {}),
+                            'timestamp': transaction.get('timestamp'),
+                            'estimated_delivery': transaction.get('estimated_delivery')
+                        })
+
+            if reconstructed:
+                self.product_tracking[product_id] = reconstructed
+                self.save_data()
+                return reconstructed
+
+        return journey
 
     @staticmethod
     def hash(block):

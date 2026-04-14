@@ -166,15 +166,18 @@
                             <div class="price-factor">Markup: ${stage.price_info.markup_percentage}%</div>
                         `;
                     } else if (stage.role === 'Retailer') {
+                        const retailPrice = stage.price_info.final_selling_price || stage.price_info.price_per_kg || 0;
+                        const purchasePrice = stage.price_info.original_price || 0;
+                        const markup = stage.price_info.markup_percentage || 0;
+                        const additionalCosts = stage.price_info.additional_costs || 0;
+                        const totalPrice = stage.price_info.total_price || retailPrice * (stage.details?.quantity || 1);
+
                         priceHtml += `
-                            <div class="stage-price">Retail Price: $${stage.price_info.final_selling_price}/kg</div>
-                            <div class="price-factor">Purchase Price: $${stage.price_info.purchase_price}/kg</div>
-                            <div class="price-factor">Retail Markup: $${stage.price_info.retail_markup}/kg</div>
-                            <div class="price-factor">Additional Costs: $${stage.price_info.additional_costs}/kg</div>
-                            <div class="price-change mt-2">
-                                Price Change from Farmer: 
-                                ${calculatePriceChange(stage.price_info.final_selling_price, getInitialPrice())}%
-                            </div>
+                            <div class="stage-price">Retail Price: $${retailPrice}/kg</div>
+                            <div class="price-factor">Purchase Price: $${purchasePrice}/kg</div>
+                            <div class="price-factor">Markup: ${markup}%</div>
+                            <div class="price-factor">Additional Costs: +$${additionalCosts}/kg</div>
+                            <div class="mt-2">Total Price: $${totalPrice}</div>
                         `;
                     }
                     
@@ -222,14 +225,15 @@
             try {
                 const response = await fetch(`/api/track/${productId}`);
                 const data = await response.json();
-                window.productJourney = data.journey; // Store journey data globally
+                const journey = data.journey || [];
+                window.productJourney = journey; // Store journey data globally
                 
-                if (data.success) {
-                    renderJourney(data.journey, data.product_id);
+                if (data.success && journey.length > 0) {
+                    renderJourney(journey, data.product_id);
                 } else {
                     document.getElementById('journey-timeline').innerHTML = `
                         <div class="alert alert-danger">
-                            ${data.error || 'Failed to load product journey'}
+                            ${data.error || 'No journey details found for this Product ID.'}
                         </div>
                     `;
                 }
@@ -253,6 +257,12 @@
         } else if (productId) {
             // Fetch data via API
             fetchProductJourney(productId);
+        } else {
+            document.getElementById('journey-timeline').innerHTML = `
+                <div class="alert alert-danger">
+                    No Product ID supplied. Please use a valid QR code link.
+                </div>
+            `;
         }
     </script>
 </body>
