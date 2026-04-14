@@ -62,39 +62,41 @@
                   <h6 class="mb-3">Price Information</h6>
                   {% if transaction['role'] == 'Farmer' %}
                     <div class="d-flex align-items-center">
-                      <span>Base Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }} per kg</span>
+                      <span>Base Price: ${{ "%.2f"|format(transaction['price_info'].get('price_per_kg', 0)) }} per kg</span>
                     </div>
-                    {% if transaction['price_info'].get('total_price') %}
+                    {% if transaction['price_info'].get('total_price') is not none %}
                       <div class="mt-2">
-                        <span>Total Value: ${{ "%.2f"|format(transaction['price_info']['total_price']) }}</span>
+                        <span>Total Value: ${{ "%.2f"|format(transaction['price_info'].get('total_price', 0)) }}</span>
                       </div>
                     {% endif %}
                   {% elif transaction['role'] == 'Distributor' %}
                     <div class="d-flex align-items-center flex-wrap">
-                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info']['original_price']) }}</span>
+                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info'].get('original_price', 0)) }}</span>
                       <span class="price-arrow">➜</span>
-                      <span>Selling Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }}</span>
-                      <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info']['markup_percentage']) }}%)</span>
-                    </div>
-                    <div class="mt-2 small">
-                      <span>Transport Cost: ${{ "%.2f"|format(transaction['price_info']['transport_cost']) }}</span>
-                      <span class="mx-2">|</span>
-                      <span>Storage Cost: ${{ "%.2f"|format(transaction['price_info']['storage_cost']) }}</span>
-                    </div>
-                  {% elif transaction['role'] == 'Retailer' %}
-                    <div class="d-flex align-items-center flex-wrap">
-                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info']['original_price']) }}</span>
-                      <span class="price-arrow">➜</span>
-                      <span>Retail Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }}</span>
-                      {% if transaction['price_info'].get('markup_percentage') %}
-                        <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info']['markup_percentage']) }}%)</span>
+                      <span>Selling Price: ${{ "%.2f"|format(transaction['price_info'].get('price_per_kg', 0)) }}</span>
+                      {% if transaction['price_info'].get('markup_percentage') is not none %}
+                        <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info'].get('markup_percentage', 0)) }}%)</span>
                       {% endif %}
                     </div>
                     <div class="mt-2 small">
-                      <span>Additional Costs: ${{ "%.2f"|format(transaction['price_info']['additional_costs']) }}</span>
-                      {% if transaction['price_info'].get('final_selling_price') %}
+                      <span>Transport Cost: ${{ "%.2f"|format(transaction['price_info'].get('transport_cost', 0)) }}</span>
+                      <span class="mx-2">|</span>
+                      <span>Storage Cost: ${{ "%.2f"|format(transaction['price_info'].get('storage_cost', 0)) }}</span>
+                    </div>
+                  {% elif transaction['role'] == 'Retailer' %}
+                    <div class="d-flex align-items-center flex-wrap">
+                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info'].get('original_price', 0)) }}</span>
+                      <span class="price-arrow">➜</span>
+                      <span>Retail Price: ${{ "%.2f"|format(transaction['price_info'].get('price_per_kg', 0)) }}</span>
+                      {% if transaction['price_info'].get('markup_percentage') is not none %}
+                        <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info'].get('markup_percentage', 0)) }}%)</span>
+                      {% endif %}
+                    </div>
+                    <div class="mt-2 small">
+                      <span>Additional Costs: ${{ "%.2f"|format(transaction['price_info'].get('additional_costs', 0)) }}</span>
+                      {% if transaction['price_info'].get('final_selling_price') is not none %}
                         <span class="mx-2">|</span>
-                        <span>Final Selling Price: ${{ "%.2f"|format(transaction['price_info']['final_selling_price']) }}</span>
+                        <span>Final Selling Price: ${{ "%.2f"|format(transaction['price_info'].get('final_selling_price')) }}</span>
                       {% endif %}
                     </div>
                   {% endif %}

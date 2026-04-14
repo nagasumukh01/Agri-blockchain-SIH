@@ -36,18 +36,18 @@
                             <p><strong>Weather Impact:</strong> {{price_info.weather_impact}}</p>
                             {% endif %}
                         {% elif stage == 'Distributor' %}
-                            <p><strong>Original Price:</strong> ${{price_info.original_price}}</p>
-                            <p><strong>Current Price per kg:</strong> ${{price_info.price_per_kg}}</p>
-                            <p><strong>Transport Cost:</strong> ${{price_info.transport_cost}}</p>
-                            <p><strong>Storage Cost:</strong> ${{price_info.storage_cost}}</p>
-                            <p><strong>Markup:</strong> {{price_info.markup_details.markup_percentage}}%</p>
-                            <p><strong>Total Value:</strong> ${{price_info.total_price}}</p>
+                            <p><strong>Original Price:</strong> ${{ price_info.original_price }}</p>
+                            <p><strong>Current Price per kg:</strong> ${{ price_info.price_per_kg }}</p>
+                            <p><strong>Transport Cost:</strong> ${{ price_info.transport_cost }}</p>
+                            <p><strong>Storage Cost:</strong> ${{ price_info.storage_cost }}</p>
+                            <p><strong>Markup:</strong> {{ price_info.markup_details.get('markup_percentage', '') }}%</p>
+                            <p><strong>Total Value:</strong> ${{ price_info.total_price }}</p>
                         {% elif stage == 'Retailer' %}
-                            <p><strong>Purchase Price:</strong> ${{price_info.original_price}}</p>
-                            <p><strong>Retail Price per kg:</strong> ${{price_info.price_per_kg}}</p>
-                            <p><strong>Markup:</strong> {{price_info.markup_percentage}}%</p>
-                            <p><strong>Additional Costs:</strong> ${{price_info.additional_costs}}</p>
-                            <p><strong>Final Selling Price:</strong> ${{price_info.total_price}}</p>
+                            <p><strong>Purchase Price:</strong> ${{ price_info.original_price }}</p>
+                            <p><strong>Retail Price per kg:</strong> ${{ price_info.price_per_kg }}</p>
+                            <p><strong>Markup:</strong> {{ price_info.get('markup_percentage', '') }}%</p>
+                            <p><strong>Additional Costs:</strong> ${{ price_info.get('additional_costs', '') }}</p>
+                            <p><strong>Final Selling Price:</strong> ${{ price_info.get('final_selling_price', price_info.get('total_price', '')) }}</p>
                         {% endif %}
                         {% endif %}
                     </div>
