@@ -3568,6 +3568,711 @@
       ],
       "previous_hash": "9f1b40bb4e50a58aa539845a6326b17c6ae4675b4928c3cfdc501079bb221aa6",
       "hash": "7ea33c74179959226f9fe21caf17788bc016c85d4d7d80973c9a8ede368da8a5"
+    },
+    {
+      "index": 38,
+      "timestamp": "2026-04-14 08:35:33",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Farmer",
+          "details": {
+            "crop": "potato",
+            "quantity": 32.0,
+            "quality": "A",
+            "location": "rural",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2026-04-14 08:35:33",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 15.04,
+            "total_price": 481.28,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:35:33"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 14.24,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:35:33"
+              },
+              "market_factors": {
+                "supply_demand": 1.05,
+                "market_volatility": 1.0,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 15.04,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 15.039696078556917
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 15.039696078556917,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:35:33"
+                  }
+                },
+                "total_price_increase": 5.618097434008399
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "7ea33c74179959226f9fe21caf17788bc016c85d4d7d80973c9a8ede368da8a5",
+      "hash": "ef0eabda0cf84a080f1cda9b5c9150f1e7f16480d16f6666d56afbc15c382814"
+    },
+    {
+      "index": 39,
+      "timestamp": "2026-04-14 08:36:21",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Distributor",
+          "details": {
+            "transport_type": "van",
+            "warehouse": "Bangalore",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:36:21",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "original_price": 15.04,
+            "price_per_kg": 22.4,
+            "total_price": 716.8,
+            "markup_details": {},
+            "transport_cost": 64.0,
+            "storage_cost": 32.0,
+            "handling_cost": 16.0,
+            "total_costs": 112.0,
+            "market_factors": {
+              "supply_demand": 1.17,
+              "market_volatility": 0.95,
+              "seasonal_impact": 0.9
+            },
+            "calculation_details": {
+              "base_price": 15.75,
+              "weather_multiplier": 1.0,
+              "weather_data": null,
+              "market_factors": {
+                "supply_demand": 1.17,
+                "market_volatility": 0.95,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 22.4,
+              "stage": "distributor",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 15.039696078556917
+                  },
+                  {
+                    "stage": "distributor",
+                    "price": 22.402448074776334
+                  }
+                ],
+                "total_markup": 19.999999999999996,
+                "total_costs": 4.3,
+                "stage_details": {
+                  "farmer": {
+                    "price": 15.039696078556917,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:35:33"
+                  },
+                  "distributor": {
+                    "price": 22.402448074776334,
+                    "markup_percentage": 19.999999999999996,
+                    "additional_costs": 3.5,
+                    "timestamp": "2026-04-14 08:36:21"
+                  }
+                },
+                "total_price_increase": 57.323920055509014
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "ef0eabda0cf84a080f1cda9b5c9150f1e7f16480d16f6666d56afbc15c382814",
+      "hash": "12d70390203f20859596954573d91b976ee7608d08672a22c612e08be8355fa0"
+    },
+    {
+      "index": 40,
+      "timestamp": "2026-04-14 08:36:53",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:36:53",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "original_price": 22.4,
+            "price_per_kg": 34.16,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 200.0
+          }
+        }
+      ],
+      "previous_hash": "12d70390203f20859596954573d91b976ee7608d08672a22c612e08be8355fa0",
+      "hash": "80ead0da3bc9bfb5051e87af1cdc0f71855dec7b3d4c0d43dbdaec3a89974a77"
+    },
+    {
+      "index": 41,
+      "timestamp": "2026-04-14 08:43:14",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:43:14",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "original_price": 22.4,
+            "price_per_kg": 34.16,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 200.0
+          }
+        }
+      ],
+      "previous_hash": "80ead0da3bc9bfb5051e87af1cdc0f71855dec7b3d4c0d43dbdaec3a89974a77",
+      "hash": "1e23eeca6e6e1e54d4b3c36f897113f3d88cdbe6fb45faab08b2ed7fe0f893c9"
+    },
+    {
+      "index": 42,
+      "timestamp": "2026-04-14 08:46:04",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:46:04",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "original_price": 22.4,
+            "price_per_kg": 34.16,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 200.0
+          }
+        }
+      ],
+      "previous_hash": "1e23eeca6e6e1e54d4b3c36f897113f3d88cdbe6fb45faab08b2ed7fe0f893c9",
+      "hash": "870c355ff119ed1043d374928c9ef9704b39c46b76d8c32002529a051a99b621"
+    },
+    {
+      "index": 43,
+      "timestamp": "2026-04-14 08:46:10",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:46:10",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "original_price": 22.4,
+            "price_per_kg": 34.16,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 200.0
+          }
+        }
+      ],
+      "previous_hash": "870c355ff119ed1043d374928c9ef9704b39c46b76d8c32002529a051a99b621",
+      "hash": "7436b72eee5186964dd43b91da0f012a56703bc41d5585f22825fb8f46924074"
+    },
+    {
+      "index": 44,
+      "timestamp": "2026-04-14 08:48:49",
+      "transactions": [
+        {
+          "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "rural",
+            "original_crop": "potato",
+            "quantity": 32.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:48:49",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "original_price": 22.4,
+            "price_per_kg": 34.16,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 200.0
+          }
+        }
+      ],
+      "previous_hash": "7436b72eee5186964dd43b91da0f012a56703bc41d5585f22825fb8f46924074",
+      "hash": "c252726b6e65529989bc77262ddc260f2daa820151f81be519eaa93063616598"
+    },
+    {
+      "index": 45,
+      "timestamp": "2026-04-14 08:49:50",
+      "transactions": [
+        {
+          "product_id": "9a5dd67d-984d-4845-ace9-211b7bc68523",
+          "role": "Farmer",
+          "details": {
+            "crop": "potato",
+            "quantity": 4.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2026-04-14 08:49:50",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 13.01,
+            "total_price": 52.04,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:49:50"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 12.21,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:49:50"
+              },
+              "market_factors": {
+                "supply_demand": 0.9,
+                "market_volatility": 1.1,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 13.01,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 13.012979874798333
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 13.012979874798333,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:49:50"
+                  }
+                },
+                "total_price_increase": 6.55040791192011
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "c252726b6e65529989bc77262ddc260f2daa820151f81be519eaa93063616598",
+      "hash": "923404c57205761d60a158c858df27e9b328ed96c63e9249ced7f784042fc7b3"
+    },
+    {
+      "index": 46,
+      "timestamp": "2026-04-14 08:50:46",
+      "transactions": [
+        {
+          "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 3.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2026-04-14 08:50:46",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 14.77,
+            "total_price": 44.31,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:50:46"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 13.97,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:50:46"
+              },
+              "market_factors": {
+                "supply_demand": 1.04,
+                "market_volatility": 1.01,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 14.77,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.774709557247046
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.774709557247046,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:50:46"
+                  }
+                },
+                "total_price_increase": 5.724627025147255
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "923404c57205761d60a158c858df27e9b328ed96c63e9249ced7f784042fc7b3",
+      "hash": "ebfe0147aaf9848ffde5ca1deb9bceae7c67bd9e9246d76698fb47094bbb9bb0"
+    },
+    {
+      "index": 47,
+      "timestamp": "2026-04-14 08:51:34",
+      "transactions": [
+        {
+          "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+          "role": "Distributor",
+          "details": {
+            "transport_type": "truck",
+            "warehouse": "erra",
+            "location": "urban",
+            "original_crop": "tomato",
+            "quantity": 3.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:51:34",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "original_price": 14.77,
+            "price_per_kg": 19.92,
+            "total_price": 59.760000000000005,
+            "markup_details": {},
+            "transport_cost": 6.0,
+            "storage_cost": 3.0,
+            "handling_cost": 1.5,
+            "total_costs": 10.5,
+            "market_factors": {
+              "supply_demand": 1.01,
+              "market_volatility": 1.07,
+              "seasonal_impact": 0.9
+            },
+            "calculation_details": {
+              "base_price": 13.68,
+              "weather_multiplier": 1.0,
+              "weather_data": null,
+              "market_factors": {
+                "supply_demand": 1.01,
+                "market_volatility": 1.07,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 19.92,
+              "stage": "distributor",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.774709557247046
+                  },
+                  {
+                    "stage": "distributor",
+                    "price": 19.916129591399752
+                  }
+                ],
+                "total_markup": 19.999999999999996,
+                "total_costs": 4.3,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.774709557247046,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:50:46"
+                  },
+                  "distributor": {
+                    "price": 19.916129591399752,
+                    "markup_percentage": 19.999999999999996,
+                    "additional_costs": 3.5,
+                    "timestamp": "2026-04-14 08:51:34"
+                  }
+                },
+                "total_price_increase": 42.51551711907735
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "ebfe0147aaf9848ffde5ca1deb9bceae7c67bd9e9246d76698fb47094bbb9bb0",
+      "hash": "a2e3d080ef54666884afb4be164ce711f79a877ca2a3130d67c4217d5af7123e"
+    },
+    {
+      "index": 48,
+      "timestamp": "2026-04-14 08:52:05",
+      "transactions": [
+        {
+          "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "location": "urban",
+            "original_crop": "tomato",
+            "quantity": 3.0,
+            "quality": "A"
+          },
+          "timestamp": "2026-04-14 08:52:05",
+          "estimated_delivery": {
+            "days": 0.5,
+            "hours": 12.0
+          },
+          "price_info": {
+            "original_price": 19.92,
+            "price_per_kg": 30.688000000000002,
+            "markup_percentage": 40.0,
+            "additional_costs": 2.8,
+            "total_price": 300.0
+          }
+        }
+      ],
+      "previous_hash": "a2e3d080ef54666884afb4be164ce711f79a877ca2a3130d67c4217d5af7123e",
+      "hash": "914b1752833b04471b4c9f525129f27ed40c5d88d3a6d898d7e1feb508ed96b7"
     }
   ],
   "product_tracking": {
@@ -3922,6 +4627,629 @@
         "estimated_delivery": {
           "days": 3,
           "hours": 72
+        }
+      }
+    ],
+    "b71dbe24-ccb8-4479-b095-ac26a87c91a7": [
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Farmer",
+        "details": {
+          "crop": "potato",
+          "quantity": 32.0,
+          "quality": "A",
+          "location": "rural",
+          "city": "chikmagalur"
+        },
+        "price_info": {
+          "price_per_kg": 15.04,
+          "total_price": 481.28,
+          "weather_impact": {
+            "temperature": 25,
+            "humidity": 60,
+            "conditions": "Clear",
+            "timestamp": "2026-04-14 08:35:33"
+          },
+          "pricing_factors": {
+            "supported_crops": {
+              "rice": {
+                "min_price": 15,
+                "max_price": 25,
+                "base_price": 20
+              },
+              "wheat": {
+                "min_price": 12,
+                "max_price": 18,
+                "base_price": 15
+              },
+              "corn": {
+                "min_price": 8,
+                "max_price": 12,
+                "base_price": 10
+              },
+              "soybeans": {
+                "min_price": 15,
+                "max_price": 22,
+                "base_price": 18
+              },
+              "vegetables": {
+                "min_price": 20,
+                "max_price": 30,
+                "base_price": 25
+              },
+              "fruits": {
+                "min_price": 25,
+                "max_price": 35,
+                "base_price": 30
+              }
+            },
+            "quality_multipliers": {
+              "A": 1.2,
+              "B": 1.0,
+              "C": 0.8
+            },
+            "location_factors": {
+              "urban": 1.1,
+              "suburban": 1.0,
+              "rural": 0.9
+            },
+            "quantity_discounts": {
+              ">1000kg": "10% discount",
+              ">500kg": "5% discount",
+              "\u2264500kg": "no discount"
+            }
+          },
+          "calculation_details": {
+            "base_price": 14.24,
+            "weather_multiplier": 1.0,
+            "weather_data": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:35:33"
+            },
+            "market_factors": {
+              "supply_demand": 1.05,
+              "market_volatility": 1.0,
+              "seasonal_impact": 0.9
+            },
+            "final_price": 15.04,
+            "stage": "farmer",
+            "price_analysis": {
+              "price_progression": [
+                {
+                  "stage": "farmer",
+                  "price": 15.039696078556917
+                }
+              ],
+              "total_markup": 0.0,
+              "total_costs": 0.8,
+              "stage_details": {
+                "farmer": {
+                  "price": 15.039696078556917,
+                  "markup_percentage": 0.0,
+                  "additional_costs": 0.8,
+                  "timestamp": "2026-04-14 08:35:33"
+                }
+              },
+              "total_price_increase": 5.618097434008399
+            }
+          }
+        },
+        "timestamp": "2026-04-14 08:35:33",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Distributor",
+        "details": {
+          "transport_type": "van",
+          "warehouse": "Bangalore",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 15.04,
+          "price_per_kg": 22.4,
+          "total_price": 716.8,
+          "markup_details": {},
+          "transport_cost": 64.0,
+          "storage_cost": 32.0,
+          "handling_cost": 16.0,
+          "total_costs": 112.0,
+          "market_factors": {
+            "supply_demand": 1.17,
+            "market_volatility": 0.95,
+            "seasonal_impact": 0.9
+          },
+          "calculation_details": {
+            "base_price": 15.75,
+            "weather_multiplier": 1.0,
+            "weather_data": null,
+            "market_factors": {
+              "supply_demand": 1.17,
+              "market_volatility": 0.95,
+              "seasonal_impact": 0.9
+            },
+            "final_price": 22.4,
+            "stage": "distributor",
+            "price_analysis": {
+              "price_progression": [
+                {
+                  "stage": "farmer",
+                  "price": 15.039696078556917
+                },
+                {
+                  "stage": "distributor",
+                  "price": 22.402448074776334
+                }
+              ],
+              "total_markup": 19.999999999999996,
+              "total_costs": 4.3,
+              "stage_details": {
+                "farmer": {
+                  "price": 15.039696078556917,
+                  "markup_percentage": 0.0,
+                  "additional_costs": 0.8,
+                  "timestamp": "2026-04-14 08:35:33"
+                },
+                "distributor": {
+                  "price": 22.402448074776334,
+                  "markup_percentage": 19.999999999999996,
+                  "additional_costs": 3.5,
+                  "timestamp": "2026-04-14 08:36:21"
+                }
+              },
+              "total_price_increase": 57.323920055509014
+            }
+          }
+        },
+        "timestamp": "2026-04-14 08:36:21",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 22.4,
+          "price_per_kg": 34.16,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 200.0
+        },
+        "timestamp": "2026-04-14 08:36:53",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 22.4,
+          "price_per_kg": 34.16,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 200.0
+        },
+        "timestamp": "2026-04-14 08:43:14",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 22.4,
+          "price_per_kg": 34.16,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 200.0
+        },
+        "timestamp": "2026-04-14 08:46:04",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 22.4,
+          "price_per_kg": 34.16,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 200.0
+        },
+        "timestamp": "2026-04-14 08:46:10",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      },
+      {
+        "product_id": "b71dbe24-ccb8-4479-b095-ac26a87c91a7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "rural",
+          "original_crop": "potato",
+          "quantity": 32.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 22.4,
+          "price_per_kg": 34.16,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 200.0
+        },
+        "timestamp": "2026-04-14 08:48:49",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      }
+    ],
+    "9a5dd67d-984d-4845-ace9-211b7bc68523": [
+      {
+        "product_id": "9a5dd67d-984d-4845-ace9-211b7bc68523",
+        "role": "Farmer",
+        "details": {
+          "crop": "potato",
+          "quantity": 4.0,
+          "quality": "A",
+          "location": "urban",
+          "city": "chikmagalur"
+        },
+        "price_info": {
+          "price_per_kg": 13.01,
+          "total_price": 52.04,
+          "weather_impact": {
+            "temperature": 25,
+            "humidity": 60,
+            "conditions": "Clear",
+            "timestamp": "2026-04-14 08:49:50"
+          },
+          "pricing_factors": {
+            "supported_crops": {
+              "rice": {
+                "min_price": 15,
+                "max_price": 25,
+                "base_price": 20
+              },
+              "wheat": {
+                "min_price": 12,
+                "max_price": 18,
+                "base_price": 15
+              },
+              "corn": {
+                "min_price": 8,
+                "max_price": 12,
+                "base_price": 10
+              },
+              "soybeans": {
+                "min_price": 15,
+                "max_price": 22,
+                "base_price": 18
+              },
+              "vegetables": {
+                "min_price": 20,
+                "max_price": 30,
+                "base_price": 25
+              },
+              "fruits": {
+                "min_price": 25,
+                "max_price": 35,
+                "base_price": 30
+              }
+            },
+            "quality_multipliers": {
+              "A": 1.2,
+              "B": 1.0,
+              "C": 0.8
+            },
+            "location_factors": {
+              "urban": 1.1,
+              "suburban": 1.0,
+              "rural": 0.9
+            },
+            "quantity_discounts": {
+              ">1000kg": "10% discount",
+              ">500kg": "5% discount",
+              "\u2264500kg": "no discount"
+            }
+          },
+          "calculation_details": {
+            "base_price": 12.21,
+            "weather_multiplier": 1.0,
+            "weather_data": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:49:50"
+            },
+            "market_factors": {
+              "supply_demand": 0.9,
+              "market_volatility": 1.1,
+              "seasonal_impact": 0.9
+            },
+            "final_price": 13.01,
+            "stage": "farmer",
+            "price_analysis": {
+              "price_progression": [
+                {
+                  "stage": "farmer",
+                  "price": 13.012979874798333
+                }
+              ],
+              "total_markup": 0.0,
+              "total_costs": 0.8,
+              "stage_details": {
+                "farmer": {
+                  "price": 13.012979874798333,
+                  "markup_percentage": 0.0,
+                  "additional_costs": 0.8,
+                  "timestamp": "2026-04-14 08:49:50"
+                }
+              },
+              "total_price_increase": 6.55040791192011
+            }
+          }
+        },
+        "timestamp": "2026-04-14 08:49:50",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "5dfbff2d-8a20-4680-8a84-493f557243d7": [
+      {
+        "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+        "role": "Farmer",
+        "details": {
+          "crop": "tomato",
+          "quantity": 3.0,
+          "quality": "A",
+          "location": "urban",
+          "city": "chikmagalur"
+        },
+        "price_info": {
+          "price_per_kg": 14.77,
+          "total_price": 44.31,
+          "weather_impact": {
+            "temperature": 25,
+            "humidity": 60,
+            "conditions": "Clear",
+            "timestamp": "2026-04-14 08:50:46"
+          },
+          "pricing_factors": {
+            "supported_crops": {
+              "rice": {
+                "min_price": 15,
+                "max_price": 25,
+                "base_price": 20
+              },
+              "wheat": {
+                "min_price": 12,
+                "max_price": 18,
+                "base_price": 15
+              },
+              "corn": {
+                "min_price": 8,
+                "max_price": 12,
+                "base_price": 10
+              },
+              "soybeans": {
+                "min_price": 15,
+                "max_price": 22,
+                "base_price": 18
+              },
+              "vegetables": {
+                "min_price": 20,
+                "max_price": 30,
+                "base_price": 25
+              },
+              "fruits": {
+                "min_price": 25,
+                "max_price": 35,
+                "base_price": 30
+              }
+            },
+            "quality_multipliers": {
+              "A": 1.2,
+              "B": 1.0,
+              "C": 0.8
+            },
+            "location_factors": {
+              "urban": 1.1,
+              "suburban": 1.0,
+              "rural": 0.9
+            },
+            "quantity_discounts": {
+              ">1000kg": "10% discount",
+              ">500kg": "5% discount",
+              "\u2264500kg": "no discount"
+            }
+          },
+          "calculation_details": {
+            "base_price": 13.97,
+            "weather_multiplier": 1.0,
+            "weather_data": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:50:46"
+            },
+            "market_factors": {
+              "supply_demand": 1.04,
+              "market_volatility": 1.01,
+              "seasonal_impact": 0.9
+            },
+            "final_price": 14.77,
+            "stage": "farmer",
+            "price_analysis": {
+              "price_progression": [
+                {
+                  "stage": "farmer",
+                  "price": 14.774709557247046
+                }
+              ],
+              "total_markup": 0.0,
+              "total_costs": 0.8,
+              "stage_details": {
+                "farmer": {
+                  "price": 14.774709557247046,
+                  "markup_percentage": 0.0,
+                  "additional_costs": 0.8,
+                  "timestamp": "2026-04-14 08:50:46"
+                }
+              },
+              "total_price_increase": 5.724627025147255
+            }
+          }
+        },
+        "timestamp": "2026-04-14 08:50:46",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      },
+      {
+        "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+        "role": "Distributor",
+        "details": {
+          "transport_type": "truck",
+          "warehouse": "erra",
+          "location": "urban",
+          "original_crop": "tomato",
+          "quantity": 3.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 14.77,
+          "price_per_kg": 19.92,
+          "total_price": 59.760000000000005,
+          "markup_details": {},
+          "transport_cost": 6.0,
+          "storage_cost": 3.0,
+          "handling_cost": 1.5,
+          "total_costs": 10.5,
+          "market_factors": {
+            "supply_demand": 1.01,
+            "market_volatility": 1.07,
+            "seasonal_impact": 0.9
+          },
+          "calculation_details": {
+            "base_price": 13.68,
+            "weather_multiplier": 1.0,
+            "weather_data": null,
+            "market_factors": {
+              "supply_demand": 1.01,
+              "market_volatility": 1.07,
+              "seasonal_impact": 0.9
+            },
+            "final_price": 19.92,
+            "stage": "distributor",
+            "price_analysis": {
+              "price_progression": [
+                {
+                  "stage": "farmer",
+                  "price": 14.774709557247046
+                },
+                {
+                  "stage": "distributor",
+                  "price": 19.916129591399752
+                }
+              ],
+              "total_markup": 19.999999999999996,
+              "total_costs": 4.3,
+              "stage_details": {
+                "farmer": {
+                  "price": 14.774709557247046,
+                  "markup_percentage": 0.0,
+                  "additional_costs": 0.8,
+                  "timestamp": "2026-04-14 08:50:46"
+                },
+                "distributor": {
+                  "price": 19.916129591399752,
+                  "markup_percentage": 19.999999999999996,
+                  "additional_costs": 3.5,
+                  "timestamp": "2026-04-14 08:51:34"
+                }
+              },
+              "total_price_increase": 42.51551711907735
+            }
+          }
+        },
+        "timestamp": "2026-04-14 08:51:34",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      },
+      {
+        "product_id": "5dfbff2d-8a20-4680-8a84-493f557243d7",
+        "role": "Retailer",
+        "details": {
+          "shop_name": "Somu",
+          "location": "urban",
+          "original_crop": "tomato",
+          "quantity": 3.0,
+          "quality": "A"
+        },
+        "price_info": {
+          "original_price": 19.92,
+          "price_per_kg": 30.688000000000002,
+          "markup_percentage": 40.0,
+          "additional_costs": 2.8,
+          "total_price": 300.0
+        },
+        "timestamp": "2026-04-14 08:52:05",
+        "estimated_delivery": {
+          "days": 0.5,
+          "hours": 12.0
         }
       }
     ]
