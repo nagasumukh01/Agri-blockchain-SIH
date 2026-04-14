@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: black;
+    }
+  </style>
+  <script>
+    // Function to open browser-specific location settings
+    function showBrowserSettings(event) {
+      event.preventDefault();
+      if (navigator.userAgent.indexOf('Chrome') !== -1) {
+        window.open('chrome://settings/content/location', '_blank');
+      } else if (navigator.userAgent.indexOf('Firefox') !== -1) {
+        window.open('about:preferences#privacy', '_blank');
+      } else if (navigator.userAgent.indexOf('Safari') !== -1) {
+        window.open('x-apple.systempreferences:com.apple.preference.security?Privacy_LocationServices', '_blank');
+      } else {
+        showLocationHelp();
+      }
+    }
+    
+    // Show help modal with instructions
+    function showLocationHelp() {
+      document.getElementById('locationHelpModal').style.display = 'block';
+    }
+
+    function closeLocationHelp() {
+      document.getElementById('locationHelpModal').style.display = 'none';
+    }
+
+    async function getLocation() {
+      if (navigator.geolocation) {
+        try {
+          // First check permission status
+          const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+          
+          if (permissionStatus.state === 'denied') {
+            // If permission is denied, open browser settings
+            if (confirm('Location access is blocked. Would you like to open browser settings to enable it?')) {
+              if (navigator.userAgent.indexOf('Chrome') !== -1) {
+                // For Chrome
+                window.open('chrome://settings/content/location', '_blank');
+              } else if (navigator.userAgent.indexOf('Firefox') !== -1) {
+                // For Firefox
+                window.open('about:preferences#privacy', '_blank');
+              } else if (navigator.userAgent.indexOf('Safari') !== -1) {
+                // For Safari
+                window.open('x-apple.systempreferences:com.apple.preference.security?Privacy_LocationServices', '_blank');
+              } else {
+                // Generic instructions
+                showLocationHelp();
+              }
+            }
+            document.getElementById('locationStatus').innerHTML = 
+              '<span class="text-warning">⚠️ Please enable location access in your browser settings and try again.</span>';
+            return;
+          }
+
+          document.getElementById('locationStatus').innerHTML = 
+            '<span class="text-info">⏳ Detecting your location...</span>';
+          
+          // Request location with high accuracy
+          const options = {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+          };
+          
+          navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+          
+        } catch (err) {
+          console.error('Permission check error:', err);
+          // Fallback to normal geolocation request
+          navigator.geolocation.getCurrentPosition(showPosition, showError, {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+          });
+        }
+      } else {
+        document.getElementById('locationStatus').innerHTML = 
+          '<span class="text-danger">❌ Geolocation is not supported by this browser. Please enter city manually.</span>';
+      }
+    }
+
+    function showPosition(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      
+      document.getElementById('locationStatus').innerHTML = 
+        '<span class="text-info">🔄 Getting city name from coordinates...</span>';
+      
+      // Use reverse geocoding to get city name
+      fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=4c841d833151e03cef03baabc6c7570f`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data && data.length > 0) {
+            const cityName = data[0].name;
+            document.getElementById('city').value = cityName;
+            document.getElementById('locationStatus').innerHTML = 
+              `<span class="text-success">✅ Location detected: ${cityName}</span>`;
+          } else {
+            throw new Error('No city data found');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('locationStatus').innerHTML = 
+            '<span class="text-warning">⚠️ Could not get city name. Please enter manually.</span>';
+        });
+    }
+
+    function showError(error) {
+      let message = '';
+      let instructions = '';
+      
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          message = "Location access was denied.";
+          instructions = 
+            "<br>To enable location access:" +
+            "<br>1. Click the location icon (🔒) in your browser's address bar" +
+            "<br>2. Select 'Allow' for location access" +
+            "<br>3. Refresh the page and try again" +
+            "<br><br>Or simply enter your city name manually.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          message = "Location information is unavailable.";
+          instructions = "<br>Please check your device's location settings or enter city manually.";
+          break;
+        case error.TIMEOUT:
+          message = "Location request timed out.";
+          instructions = "<br>Please check your internet connection or enter city manually.";
+          break;
+        default:
+          message = "An unknown error occurred.";
+          instructions = "<br>Please enter your city manually.";
+      }
+      
+      document.getElementById('locationStatus').innerHTML = 
+        `<span class="text-warning">⚠️ ${message}</span>` +
+        `<small class="d-block text-muted">${instructions}</small>` +
+        '<button type="button" class="btn btn-link btn-sm p-0" onclick="showLocationHelp()">Need help?</button>';
+    }
+  </script>
+</head>
+<body class="container mt-4">
+  <h2 class="text-success">👩‍🌾 Farmer Portal</h2>
+  <form method="POST" class="mt-3">
+    <div class="mb-3">
+      <label class="form-label">Crop Name</label>
+      <input type="text" name="crop" class="form-control" required 
+             placeholder="Enter any crop name (e.g., rice, wheat, carrots, etc.)"
+             pattern="[A-Za-z\s]+" title="Please enter a valid crop name using letters only">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Quantity (kg)</label>
+      <input type="number" name="quantity" class="form-control" required min="1" step="0.1">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Quality Grade</label>
+      <select name="quality" class="form-control" required>
+        <option value="A">A - Premium</option>
+        <option value="B" selected>B - Standard</option>
+        <option value="C">C - Basic</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Location Type</label>
+      <select name="location" class="form-control" required>
+        <option value="urban">Urban</option>
+        <option value="suburban">Suburban</option>
+        <option value="rural" selected>Rural</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">City (for weather data)</label>
+      <div class="input-group">
+        <input type="text" id="city" name="city" class="form-control" required 
+               placeholder="Enter city name or click detect location"
+               pattern="[A-Za-z\s]+" title="Please enter a valid city name">
+        <button type="button" class="btn btn-outline-secondary" onclick="getLocation()" id="detectLocationBtn">
+          📍 Detect Location
+        </button>
+      </div>
+      <div class="text-end mt-1">
+        <small><a href="#" onclick="showBrowserSettings(event)" class="text-muted">Location blocked? Click here to enable</a></small>
+      </div>
+      <small id="locationStatus" class="form-text text-muted"></small>
+    </div>
+    <button type="submit" class="btn btn-success">Calculate Price & Add to Blockchain</button>
+  </form>
+  <a href="/chain" class="btn btn-link mt-3">View Blockchain</a>
+
+  <!-- Location Help Modal -->
+  <div id="locationHelpModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLocationHelp()">&times;</span>
+      <h4>📍 Location Access Help</h4>
+      <hr>
+      <h5>Chrome/Edge:</h5>
+      <ol>
+        <li>Look for the location icon (🔒) in the address bar</li>
+        <li>Click it and select "Allow"</li>
+        <li>Refresh the page</li>
+        <li>Click "Detect Location" again</li>
+      </ol>
+      <h5>Firefox:</h5>
+      <ol>
+        <li>Click the shield icon in the address bar</li>
+        <li>Select "Allow" for Location</li>
+        <li>Refresh the page</li>
+        <li>Click "Detect Location" again</li>
+      </ol>
+      <h5>Mobile Devices:</h5>
+      <ol>
+        <li>Check if location services are enabled in your device settings</li>
+        <li>Allow location access for your browser in device settings</li>
+        <li>Refresh the page</li>
+        <li>Click "Detect Location" again</li>
+      </ol>
+      <p class="text-muted mt-3">
+        Note: If you prefer not to share your location, you can always enter your city name manually.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

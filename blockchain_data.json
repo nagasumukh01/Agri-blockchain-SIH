@@ -1,0 +1,3542 @@
+{
+  "chain": [
+    {
+      "index": 1,
+      "timestamp": "2025-09-15 15:17:24",
+      "transactions": [],
+      "previous_hash": "1",
+      "hash": "c9999139b410eca8440c8b19341c674e98e82754be99391ed2ca19a99d59a4b2"
+    },
+    {
+      "index": 2,
+      "timestamp": "2025-09-15 15:18:52",
+      "transactions": [
+        {
+          "product_id": "e88e2b69-a7a7-4700-88f4-8d8a35449def",
+          "role": "Farmer",
+          "details": {
+            "crop": "wheat",
+            "quantity": 12.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 15:18:52",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 18.0,
+            "total_price": 216.0,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 20,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 18.0
+            }
+          }
+        }
+      ],
+      "previous_hash": "c9999139b410eca8440c8b19341c674e98e82754be99391ed2ca19a99d59a4b2",
+      "hash": "a21480cfd0178e1fda8e1ab5c53ac1d428c4b9fc804377f81b9a3ca39d4d4682"
+    },
+    {
+      "index": 3,
+      "timestamp": "2025-09-15 15:22:57",
+      "transactions": [
+        {
+          "product_id": "d8e3edb3-52d6-4d95-9926-50dc1f443bf5",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 1.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 15:22:57",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 22.5,
+            "total_price": 22.5,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 25,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 22.5
+            }
+          }
+        }
+      ],
+      "previous_hash": "a21480cfd0178e1fda8e1ab5c53ac1d428c4b9fc804377f81b9a3ca39d4d4682",
+      "hash": "c6e62af4e8226dfd65992e27774fb6eeb5275b1686f7b5db66af9438845a113d"
+    },
+    {
+      "index": 4,
+      "timestamp": "2025-09-15 15:23:10",
+      "transactions": [
+        {
+          "product_id": "5d5d6f0f-d80a-4386-a51c-608b299cf3d9",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 1.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 15:23:10",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 22.5,
+            "total_price": 22.5,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 25,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 22.5
+            }
+          }
+        }
+      ],
+      "previous_hash": "c6e62af4e8226dfd65992e27774fb6eeb5275b1686f7b5db66af9438845a113d",
+      "hash": "1ecddc051b903bc7817b198ab2f643ab3b18c03eaebe036c89a89b6219ee4186"
+    },
+    {
+      "index": 5,
+      "timestamp": "2025-09-15 15:23:29",
+      "transactions": [
+        {
+          "product_id": "5d5d6f0f-d80a-4386-a51c-608b299cf3d9",
+          "role": "Distributor",
+          "details": {
+            "transport_type": "truck",
+            "warehouse": "Hyderabad Central Storage",
+            "location": "urban"
+          },
+          "timestamp": "2025-09-15 15:23:29",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          }
+        }
+      ],
+      "previous_hash": "1ecddc051b903bc7817b198ab2f643ab3b18c03eaebe036c89a89b6219ee4186",
+      "hash": "4546ae37cbc0c132f7d271173dac8f4ace67796e3a83782206e6cf46f6d39e1c"
+    },
+    {
+      "index": 6,
+      "timestamp": "2025-09-15 15:26:42",
+      "transactions": [
+        {
+          "product_id": "f21fe6ba-ea4b-4ef3-be6e-30b2d9e2977e",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 1.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 15:26:42",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 22.5,
+            "total_price": 22.5,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 25,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 22.5
+            }
+          }
+        }
+      ],
+      "previous_hash": "4546ae37cbc0c132f7d271173dac8f4ace67796e3a83782206e6cf46f6d39e1c",
+      "hash": "8902f5471f03638ff0c7ac900d98a9a012b3a1e325ad5a33dbe295a8fae7a7f4"
+    },
+    {
+      "index": 7,
+      "timestamp": "2025-09-15 15:27:17",
+      "transactions": [
+        {
+          "product_id": "f21fe6ba-ea4b-4ef3-be6e-30b2d9e2977e",
+          "role": "Distributor",
+          "details": {
+            "transport_type": "truck",
+            "warehouse": "Bangalore",
+            "location": "urban"
+          },
+          "timestamp": "2025-09-15 15:27:17",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          }
+        }
+      ],
+      "previous_hash": "8902f5471f03638ff0c7ac900d98a9a012b3a1e325ad5a33dbe295a8fae7a7f4",
+      "hash": "7f8b4dccd3e7da5d0aa1e9de2eeb544e2db7d8bfccb3f0e71fa27fdbf41df7be"
+    },
+    {
+      "index": 8,
+      "timestamp": "2025-09-15 15:27:59",
+      "transactions": [
+        {
+          "product_id": "f21fe6ba-ea4b-4ef3-be6e-30b2d9e2977e",
+          "role": "Retailer",
+          "details": {
+            "shop_name": "Somu",
+            "selling_price": 35.0,
+            "location": "suburban"
+          },
+          "timestamp": "2025-09-15 15:27:59",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          }
+        }
+      ],
+      "previous_hash": "7f8b4dccd3e7da5d0aa1e9de2eeb544e2db7d8bfccb3f0e71fa27fdbf41df7be",
+      "hash": "cdf92869fac316fbe527a244deb20b39b9021f37dde753d34842df7ab8437bb6"
+    },
+    {
+      "index": 9,
+      "timestamp": "2025-09-15 15:40:14",
+      "transactions": [
+        {
+          "product_id": "6095b27b-8399-4fa1-9415-6b22b5c01375",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 15:40:14",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 22.5,
+            "total_price": 90.0,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 25,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 22.5
+            }
+          }
+        }
+      ],
+      "previous_hash": "cdf92869fac316fbe527a244deb20b39b9021f37dde753d34842df7ab8437bb6",
+      "hash": "5c3b7dbb0b5a279baf9ceb031327eee4b50197cf7b4d12336711a331581952b4"
+    },
+    {
+      "index": 10,
+      "timestamp": "2025-09-15 16:55:08",
+      "transactions": [
+        {
+          "product_id": "70d7e148-3a8c-494b-9183-638722de082b",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 12.0,
+            "quality": "B",
+            "location": "rural",
+            "city": ""
+          },
+          "timestamp": "2025-09-15 16:55:08",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 22.5,
+            "total_price": 270.0,
+            "weather_impact": null,
+            "pricing_factors": {
+              "base_prices": {
+                "rice": 25,
+                "wheat": 20,
+                "corn": 15,
+                "potato": 12,
+                "tomato": 18
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 25,
+              "quality_factor": 1.0,
+              "location_factor": 0.9,
+              "quantity_factor": 1.0,
+              "weather_factor": 1.0,
+              "weather_data": null,
+              "final_price": 22.5
+            }
+          }
+        }
+      ],
+      "previous_hash": "5c3b7dbb0b5a279baf9ceb031327eee4b50197cf7b4d12336711a331581952b4",
+      "hash": "477f9644162f16d392344294a685ad8f55ffa10c10a13488d1d47f522c2e2eae"
+    },
+    {
+      "index": 11,
+      "timestamp": "2025-09-15 17:32:31",
+      "transactions": [
+        {
+          "product_id": "7740bc2f-a407-4b10-aa24-3969317f45c9",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 1.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-15 17:32:31",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 11.94,
+            "total_price": 11.94,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 17:32:31"
+            },
+            "pricing_factors": {
+              "supported_crops": [
+                "beans",
+                "carrot",
+                "corn",
+                "garlic",
+                "onion",
+                "peas",
+                "potato",
+                "rice",
+                "tomato",
+                "wheat"
+              ],
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 11.943323140421068,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 17:32:31"
+              },
+              "final_price": 11.94
+            }
+          }
+        }
+      ],
+      "previous_hash": "477f9644162f16d392344294a685ad8f55ffa10c10a13488d1d47f522c2e2eae",
+      "hash": "ee2b2870641abcc4a52abf06b2bda9ed846045ff22a27f4aab81403414b92070"
+    },
+    {
+      "index": 12,
+      "timestamp": "2025-09-15 17:55:34",
+      "transactions": [
+        {
+          "product_id": "c7056480-8f35-49a7-8bf5-07ed19c62828",
+          "role": "Farmer",
+          "details": {
+            "crop": "banana",
+            "quantity": 100.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-15 17:55:34",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 19.52,
+            "total_price": 1952.0,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 17:55:34"
+            },
+            "pricing_factors": {
+              "supported_crops": [
+                "banana",
+                "beans",
+                "carrot",
+                "corn",
+                "garlic",
+                "onion",
+                "peas",
+                "potato",
+                "rice",
+                "tomato",
+                "wheat"
+              ],
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 19.516833502141186,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 17:55:34"
+              },
+              "final_price": 19.52
+            }
+          }
+        }
+      ],
+      "previous_hash": "ee2b2870641abcc4a52abf06b2bda9ed846045ff22a27f4aab81403414b92070",
+      "hash": "2c6bedf981575ab1fa2706617779d1fded00b6ceacd449d0fd3e768d05fdc175"
+    },
+    {
+      "index": 13,
+      "timestamp": "2025-09-15 19:06:27",
+      "transactions": [
+        {
+          "product_id": "6c12c840-c5e3-49ad-8763-93010372ef57",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 11.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2025-09-15 19:06:27",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 18.2,
+            "total_price": 200.2,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 19:06:27"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 17.4,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 19:06:27"
+              },
+              "market_factors": {
+                "supply_demand": 1.05,
+                "market_volatility": 1.03,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 18.2,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 18.19619828839132
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 18.19619828839132,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-15 19:06:27"
+                  }
+                },
+                "total_price_increase": 4.598705916877539
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "2c6bedf981575ab1fa2706617779d1fded00b6ceacd449d0fd3e768d05fdc175",
+      "hash": "8422813200e4208a974a2b1cb55bf9b181e5aa0ed613aa78356e50d78dd2079a"
+    },
+    {
+      "index": 14,
+      "timestamp": "2025-09-15 19:09:30",
+      "transactions": [
+        {
+          "product_id": "ec803d01-62e3-47da-8967-b947cbd00e56",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 15.0,
+            "quality": "A",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-15 19:09:30",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 17.13,
+            "total_price": 256.95,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 19:09:30"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 16.33,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 19:09:30"
+              },
+              "market_factors": {
+                "supply_demand": 0.99,
+                "market_volatility": 1.04,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 17.13,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 17.131135991164392
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 17.131135991164392,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-15 19:09:30"
+                  }
+                },
+                "total_price_increase": 4.898618200429067
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "8422813200e4208a974a2b1cb55bf9b181e5aa0ed613aa78356e50d78dd2079a",
+      "hash": "935c45849f9e659c905b32e0b85f6c92fa3466b90d986c5df495b4730b032f08"
+    },
+    {
+      "index": 15,
+      "timestamp": "2025-09-15 19:26:30",
+      "transactions": [
+        {
+          "product_id": "41e91b5b-da81-4b1c-a65e-f0ef782db0bd",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 3.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-15 19:26:30",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 14.29,
+            "total_price": 42.87,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 19:26:30"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 13.49,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 19:26:30"
+              },
+              "market_factors": {
+                "supply_demand": 0.82,
+                "market_volatility": 0.92,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 14.29,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.292994327496178
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.292994327496178,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-15 19:26:30"
+                  }
+                },
+                "total_price_increase": 5.929002714910742
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "935c45849f9e659c905b32e0b85f6c92fa3466b90d986c5df495b4730b032f08",
+      "hash": "514cd4c04d976d2cc3c41a7bc0611937a507088bafb66d1bc6725eb3bfb08004"
+    },
+    {
+      "index": 16,
+      "timestamp": "2025-09-15 19:47:35",
+      "transactions": [
+        {
+          "product_id": "03712a8d-ca39-4c9e-b16e-0f718fa94a0c",
+          "role": "Farmer",
+          "details": {
+            "crop": "potato",
+            "quantity": 3.0,
+            "quality": "B",
+            "location": "urban",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-15 19:47:35",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 15.28,
+            "total_price": 45.839999999999996,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 19:47:35"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 14.48,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 19:47:35"
+              },
+              "market_factors": {
+                "supply_demand": 0.88,
+                "market_volatility": 0.94,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 15.28,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 15.27898677674869
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 15.27898677674869,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-15 19:47:35"
+                  }
+                },
+                "total_price_increase": 5.525248502089203
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "514cd4c04d976d2cc3c41a7bc0611937a507088bafb66d1bc6725eb3bfb08004",
+      "hash": "9802788d048c78584468d40a787bcbb0131172d0b540488ea12df3504c283d3a"
+    },
+    {
+      "index": 17,
+      "timestamp": "2025-09-15 23:01:32",
+      "transactions": [
+        {
+          "product_id": "7ab49ca1-1c5d-46b1-b854-ba247eea4d83",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 6.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "AP"
+          },
+          "timestamp": "2025-09-15 23:01:32",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 14.97,
+            "total_price": 89.82000000000001,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-15 23:01:32"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 14.17,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-15 23:01:32"
+              },
+              "market_factors": {
+                "supply_demand": 0.86,
+                "market_volatility": 0.94,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 14.97,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.973114505378362
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.973114505378362,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-15 23:01:32"
+                  }
+                },
+                "total_price_increase": 5.644489781666687
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "9802788d048c78584468d40a787bcbb0131172d0b540488ea12df3504c283d3a",
+      "hash": "744ea8d25375dbea76dfac149566c4c36573421c76d6ebc78b02b0458a90d9f6"
+    },
+    {
+      "index": 18,
+      "timestamp": "2025-09-16 09:49:24",
+      "transactions": [
+        {
+          "product_id": "8e7d25f6-4340-48f4-b055-c2afa3c95535",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "urban",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2025-09-16 09:49:24",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 19.01,
+            "total_price": 76.04,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 09:49:24"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 18.21,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 09:49:24"
+              },
+              "market_factors": {
+                "supply_demand": 1.1,
+                "market_volatility": 0.96,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 19.01,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 19.01178422834576
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 19.01178422834576,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 09:49:24"
+                  }
+                },
+                "total_price_increase": 4.392760148974528
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "744ea8d25375dbea76dfac149566c4c36573421c76d6ebc78b02b0458a90d9f6",
+      "hash": "a6dcbc36f9c2f6cc0b40c9a024fef8bd6f58844bbf4c373a8e605ce175d580e8"
+    },
+    {
+      "index": 19,
+      "timestamp": "2025-09-16 09:49:25",
+      "transactions": [
+        {
+          "product_id": "0057dec9-3dae-4483-af0e-1ba5e6f153c0",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "urban",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2025-09-16 09:49:25",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 16.63,
+            "total_price": 66.52,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 09:49:25"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 15.83,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 09:49:25"
+              },
+              "market_factors": {
+                "supply_demand": 0.96,
+                "market_volatility": 0.92,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 16.63,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 16.63471750689296
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 16.63471750689296,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 09:49:25"
+                  }
+                },
+                "total_price_increase": 5.05218990898799
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "a6dcbc36f9c2f6cc0b40c9a024fef8bd6f58844bbf4c373a8e605ce175d580e8",
+      "hash": "beb238c627687dad793e7b3049fa42463f17d2ad6c6b4868b097de20bc36b3a0"
+    },
+    {
+      "index": 20,
+      "timestamp": "2025-09-16 09:49:29",
+      "transactions": [
+        {
+          "product_id": "be45698e-f947-4ea7-9562-a9b5fbadf003",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "urban",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2025-09-16 09:49:29",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 18.38,
+            "total_price": 73.52,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 09:49:29"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 17.58,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 09:49:29"
+              },
+              "market_factors": {
+                "supply_demand": 1.07,
+                "market_volatility": 0.97,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 18.38,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 18.38102546425584
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 18.38102546425584,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 09:49:29"
+                  }
+                },
+                "total_price_increase": 4.550360282604043
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "beb238c627687dad793e7b3049fa42463f17d2ad6c6b4868b097de20bc36b3a0",
+      "hash": "b29aac72b287dea539e8243d541fd7392324243b71482afc211ec1a929072201"
+    },
+    {
+      "index": 21,
+      "timestamp": "2025-09-16 09:53:44",
+      "transactions": [
+        {
+          "product_id": "62d8e7b1-60d2-4cde-a575-bb332054c17a",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-16 09:53:44",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 18.78,
+            "total_price": 75.12,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 09:53:44"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 17.98,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 09:53:44"
+              },
+              "market_factors": {
+                "supply_demand": 1.09,
+                "market_volatility": 1.06,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 18.78,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 18.776793572428467
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 18.776793572428467,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 09:53:44"
+                  }
+                },
+                "total_price_increase": 4.450181823453677
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "b29aac72b287dea539e8243d541fd7392324243b71482afc211ec1a929072201",
+      "hash": "7dd5136aa5d17e676a687bec64765f3e4abf11d6c64ef3de785bb68717ce7d78"
+    },
+    {
+      "index": 22,
+      "timestamp": "2025-09-16 10:02:54",
+      "transactions": [
+        {
+          "product_id": "0dd847e8-1f03-4b01-8f91-37beb583be18",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 6.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-16 10:02:54",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 18.02,
+            "total_price": 108.12,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 10:02:54"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 17.22,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 10:02:54"
+              },
+              "market_factors": {
+                "supply_demand": 1.04,
+                "market_volatility": 1.09,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 18.02,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 18.02128717918137
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 18.02128717918137,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 10:02:54"
+                  }
+                },
+                "total_price_increase": 4.645413502929747
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "7dd5136aa5d17e676a687bec64765f3e4abf11d6c64ef3de785bb68717ce7d78",
+      "hash": "dd03942dcc140fd8cd8c47fa5c68010c089f121d7cfb9dff36fb5d7e9fe07935"
+    },
+    {
+      "index": 23,
+      "timestamp": "2025-09-16 11:12:40",
+      "transactions": [
+        {
+          "product_id": "10972345-2ecd-4a7e-bac6-f40c73dfe9b1",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "chikmagalur"
+          },
+          "timestamp": "2025-09-16 11:12:40",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 14.63,
+            "total_price": 58.52,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 11:12:40"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 13.83,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 11:12:40"
+              },
+              "market_factors": {
+                "supply_demand": 0.84,
+                "market_volatility": 1.03,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 14.63,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.625383016332506
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.625383016332506,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 11:12:40"
+                  }
+                },
+                "total_price_increase": 5.786458133238892
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "dd03942dcc140fd8cd8c47fa5c68010c089f121d7cfb9dff36fb5d7e9fe07935",
+      "hash": "439fdb7064463b3a2b2e348348405649784dca053756c36968cfb786d5bfb55b"
+    },
+    {
+      "index": 24,
+      "timestamp": "2025-09-16 11:48:21",
+      "transactions": [
+        {
+          "product_id": "d127359f-c2da-4f8c-897c-004ae63cbfaa",
+          "role": "Farmer",
+          "details": {
+            "crop": "carrot",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "urban",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-16 11:48:21",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 20.49,
+            "total_price": 81.96,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 11:48:21"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 19.69,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 11:48:21"
+              },
+              "market_factors": {
+                "supply_demand": 1.19,
+                "market_volatility": 1.03,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 20.49,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 20.485911146656935
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 20.485911146656935,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 11:48:21"
+                  }
+                },
+                "total_price_increase": 4.06382002864956
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "439fdb7064463b3a2b2e348348405649784dca053756c36968cfb786d5bfb55b",
+      "hash": "350b39bf60e0473753a21e5f13797540f639318fc600e21daa55aabae1bd98e8"
+    },
+    {
+      "index": 25,
+      "timestamp": "2025-09-16 14:10:34",
+      "transactions": [
+        {
+          "product_id": "c54be92f-be85-46fc-9f35-34e35d363fc9",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 5.0,
+            "quality": "B",
+            "location": "suburban",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-09-16 14:10:34",
+          "estimated_delivery": {
+            "days": 2,
+            "hours": 48
+          },
+          "price_info": {
+            "price_per_kg": 16.85,
+            "total_price": 84.25,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-09-16 14:10:34"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 16.05,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-09-16 14:10:34"
+              },
+              "market_factors": {
+                "supply_demand": 0.97,
+                "market_volatility": 0.95,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 16.85,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 16.85230694092344
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 16.85230694092344,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-09-16 14:10:34"
+                  }
+                },
+                "total_price_increase": 4.983707344646496
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "350b39bf60e0473753a21e5f13797540f639318fc600e21daa55aabae1bd98e8",
+      "hash": "bbb4d0aca6b841daa656bd01c4210ae5b4dc4a3be6b9713ee9476fd9e607666e"
+    },
+    {
+      "index": 26,
+      "timestamp": "2025-10-02 09:33:16",
+      "transactions": [
+        {
+          "product_id": "44b66b7a-e75c-4560-afed-ca3c6d309de0",
+          "role": "Farmer",
+          "details": {
+            "crop": "potato",
+            "quantity": 5.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-10-02 09:33:16",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 14.19,
+            "total_price": 70.95,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-10-02 09:33:16"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 13.39,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-10-02 09:33:16"
+              },
+              "market_factors": {
+                "supply_demand": 0.81,
+                "market_volatility": 0.96,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 14.19,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 14.193832924367014
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 14.193832924367014,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-10-02 09:33:16"
+                  }
+                },
+                "total_price_increase": 5.972898157812495
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "bbb4d0aca6b841daa656bd01c4210ae5b4dc4a3be6b9713ee9476fd9e607666e",
+      "hash": "06e426c31424f329ba57ff076592faf3971dbaf789332bce27983cf96e675cec"
+    },
+    {
+      "index": 27,
+      "timestamp": "2025-10-02 09:35:03",
+      "transactions": [
+        {
+          "product_id": "3c496c59-a70a-40a2-80ba-c9a6ff2eef8a",
+          "role": "Farmer",
+          "details": {
+            "crop": "tomato",
+            "quantity": 4.0,
+            "quality": "B",
+            "location": "rural",
+            "city": "Bangalore Urban"
+          },
+          "timestamp": "2025-10-02 09:35:03",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 18.97,
+            "total_price": 75.88,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2025-10-02 09:35:03"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 18.17,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2025-10-02 09:35:03"
+              },
+              "market_factors": {
+                "supply_demand": 1.1,
+                "market_volatility": 1.04,
+                "seasonal_impact": 1.1
+              },
+              "final_price": 18.97,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 18.974007774678704
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 18.974007774678704,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2025-10-02 09:35:03"
+                  }
+                },
+                "total_price_increase": 4.401890930819434
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "06e426c31424f329ba57ff076592faf3971dbaf789332bce27983cf96e675cec",
+      "hash": "cc4f6ae59c608604c3fd6f70f52f4fa404cf9cfc864c2319de1e031c59332e88"
+    },
+    {
+      "index": 28,
+      "timestamp": "2026-04-14 07:54:26",
+      "transactions": [
+        {
+          "product_id": "d6badcfb-04ce-415a-9ec8-b6c9cbee1ac9",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 07:54:26",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 32.63,
+            "total_price": 163.15,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 07:54:26"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 31.83,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 07:54:26"
+              },
+              "market_factors": {
+                "supply_demand": 1.01,
+                "market_volatility": 1.05,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 32.63,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 32.631664956889004
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 32.631664956889004,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 07:54:26"
+                  }
+                },
+                "total_price_increase": 2.5132207224581924
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "cc4f6ae59c608604c3fd6f70f52f4fa404cf9cfc864c2319de1e031c59332e88",
+      "hash": "575d5404700dab295dc6065e030d89d6c451b9cf8be3d9562f23657597e182d8"
+    },
+    {
+      "index": 29,
+      "timestamp": "2026-04-14 07:59:11",
+      "transactions": [
+        {
+          "product_id": "3dda98e1-dc99-4337-b8e6-4fc3dba76aac",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 100.0,
+            "quality": "A",
+            "location": "rural",
+            "city": "Delhi"
+          },
+          "timestamp": "2026-04-14 07:59:11",
+          "estimated_delivery": {
+            "days": 3,
+            "hours": 72
+          },
+          "price_info": {
+            "price_per_kg": 35.36,
+            "total_price": 3536.0,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 07:59:11"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 34.56,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 07:59:11"
+              },
+              "market_factors": {
+                "supply_demand": 1.07,
+                "market_volatility": 0.93,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 35.36,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 35.3611758984685
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 35.3611758984685,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 07:59:11"
+                  }
+                },
+                "total_price_increase": 2.314736056290976
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "575d5404700dab295dc6065e030d89d6c451b9cf8be3d9562f23657597e182d8",
+      "hash": "a8e4ba855f3265ddd9c21ff2844301601e480ec0e91d35d697ab2309333267b2"
+    },
+    {
+      "index": 30,
+      "timestamp": "2026-04-14 08:00:30",
+      "transactions": [
+        {
+          "product_id": "9bf4d9a1-0b29-4758-a0fe-e515cb562777",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 08:00:30",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 46.62,
+            "total_price": 233.1,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:00:30"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 45.82,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:00:30"
+              },
+              "market_factors": {
+                "supply_demand": 1.06,
+                "market_volatility": 0.9,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 46.62,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 46.62023685272937
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 46.62023685272937,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:00:30"
+                  }
+                },
+                "total_price_increase": 1.7459534366251177
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "a8e4ba855f3265ddd9c21ff2844301601e480ec0e91d35d697ab2309333267b2",
+      "hash": "1e769d6d6e8fe8603bd7eb0efe84427f6e5f1a11cdba8d909e766864f911aa7e"
+    },
+    {
+      "index": 31,
+      "timestamp": "2026-04-14 08:00:32",
+      "transactions": [
+        {
+          "product_id": "660a3f34-4097-4bd3-8edd-e1baaf7f66d1",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 08:00:32",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 29.31,
+            "total_price": 146.54999999999998,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:00:31"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 28.51,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:00:31"
+              },
+              "market_factors": {
+                "supply_demand": 0.88,
+                "market_volatility": 1.05,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 29.31,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 29.314306550134795
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 29.314306550134795,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:00:32"
+                  }
+                },
+                "total_price_increase": 2.8056091723409593
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "1e769d6d6e8fe8603bd7eb0efe84427f6e5f1a11cdba8d909e766864f911aa7e",
+      "hash": "ff2a9dce3b3570ed9a6e778e2b5d92ad3af5c2e267740801454ca8f491b16cb6"
+    },
+    {
+      "index": 32,
+      "timestamp": "2026-04-14 08:00:32",
+      "transactions": [
+        {
+          "product_id": "586d9875-ea95-4411-9ed4-4402821b5fc0",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 08:00:32",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 36.78,
+            "total_price": 183.9,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:00:32"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 35.98,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:00:32"
+              },
+              "market_factors": {
+                "supply_demand": 0.95,
+                "market_volatility": 1.09,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 36.78,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 36.778323563779416
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 36.778323563779416,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:00:32"
+                  }
+                },
+                "total_price_increase": 2.2235610799981353
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "ff2a9dce3b3570ed9a6e778e2b5d92ad3af5c2e267740801454ca8f491b16cb6",
+      "hash": "bedd5832dd9a8e6dd2257024aaafb1c724906ef9db4f5f0fc7f7db93937bcffb"
+    },
+    {
+      "index": 33,
+      "timestamp": "2026-04-14 08:04:10",
+      "transactions": [
+        {
+          "product_id": "f08882d6-fe43-4f9e-8deb-086e54cb8621",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 08:04:10",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 40.16,
+            "total_price": 200.79999999999998,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:04:10"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 39.36,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:04:10"
+              },
+              "market_factors": {
+                "supply_demand": 1.07,
+                "market_volatility": 0.91,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 40.16,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 40.15992166572928
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 40.15992166572928,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:04:10"
+                  }
+                },
+                "total_price_increase": 2.0325243703331806
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "bedd5832dd9a8e6dd2257024aaafb1c724906ef9db4f5f0fc7f7db93937bcffb",
+      "hash": "9a650dce55f7bdc18c029f7e29acb743845f3d269d6e9a636935388aa7df657e"
+    },
+    {
+      "index": 34,
+      "timestamp": "2026-04-14 08:04:11",
+      "transactions": [
+        {
+          "product_id": "8477de9b-8e09-4959-be3f-6d7cf65fb8ac",
+          "role": "Farmer",
+          "details": {
+            "crop": "rice",
+            "quantity": 5.0,
+            "quality": "A",
+            "location": "urban",
+            "city": "bangalore"
+          },
+          "timestamp": "2026-04-14 08:04:11",
+          "estimated_delivery": {
+            "days": 1,
+            "hours": 24
+          },
+          "price_info": {
+            "price_per_kg": 37.97,
+            "total_price": 189.85,
+            "weather_impact": {
+              "temperature": 25,
+              "humidity": 60,
+              "conditions": "Clear",
+              "timestamp": "2026-04-14 08:04:11"
+            },
+            "pricing_factors": {
+              "supported_crops": {
+                "rice": {
+                  "min_price": 15,
+                  "max_price": 25,
+                  "base_price": 20
+                },
+                "wheat": {
+                  "min_price": 12,
+                  "max_price": 18,
+                  "base_price": 15
+                },
+                "corn": {
+                  "min_price": 8,
+                  "max_price": 12,
+                  "base_price": 10
+                },
+                "soybeans": {
+                  "min_price": 15,
+                  "max_price": 22,
+                  "base_price": 18
+                },
+                "vegetables": {
+                  "min_price": 20,
+                  "max_price": 30,
+                  "base_price": 25
+                },
+                "fruits": {
+                  "min_price": 25,
+                  "max_price": 35,
+                  "base_price": 30
+                }
+              },
+              "quality_multipliers": {
+                "A": 1.2,
+                "B": 1.0,
+                "C": 0.8
+              },
+              "location_factors": {
+                "urban": 1.1,
+                "suburban": 1.0,
+                "rural": 0.9
+              },
+              "quantity_discounts": {
+                ">1000kg": "10% discount",
+                ">500kg": "5% discount",
+                "\u2264500kg": "no discount"
+              }
+            },
+            "calculation_details": {
+              "base_price": 37.17,
+              "weather_multiplier": 1.0,
+              "weather_data": {
+                "temperature": 25,
+                "humidity": 60,
+                "conditions": "Clear",
+                "timestamp": "2026-04-14 08:04:11"
+              },
+              "market_factors": {
+                "supply_demand": 1.12,
+                "market_volatility": 1.09,
+                "seasonal_impact": 0.9
+              },
+              "final_price": 37.97,
+              "stage": "farmer",
+              "price_analysis": {
+                "price_progression": [
+                  {
+                    "stage": "farmer",
+                    "price": 37.97111934329503
+                  }
+                ],
+                "total_markup": 0.0,
+                "total_costs": 0.8,
+                "stage_details": {
+                  "farmer": {
+                    "price": 37.97111934329503,
+                    "markup_percentage": 0.0,
+                    "additional_costs": 0.8,
+                    "timestamp": "2026-04-14 08:04:11"
+                  }
+                },
+                "total_price_increase": 2.152208526763943
+              }
+            }
+          }
+        }
+      ],
+      "previous_hash": "9a650dce55f7bdc18c029f7e29acb743845f3d269d6e9a636935388aa7df657e",
+      "hash": "7b9bed10266a8ad3d2b31484728968fedd746b442edbb200010895b4da41860c"
+    }
+  ],
+  "product_tracking": {
+    "e88e2b69-a7a7-4700-88f4-8d8a35449def": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 15:18:52",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "d8e3edb3-52d6-4d95-9926-50dc1f443bf5": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 15:22:57",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "5d5d6f0f-d80a-4386-a51c-608b299cf3d9": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 15:23:10",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      },
+      {
+        "role": "Distributor",
+        "timestamp": "2025-09-15 15:23:29",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "f21fe6ba-ea4b-4ef3-be6e-30b2d9e2977e": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 15:26:42",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      },
+      {
+        "role": "Distributor",
+        "timestamp": "2025-09-15 15:27:17",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      },
+      {
+        "role": "Retailer",
+        "timestamp": "2025-09-15 15:27:59",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "6095b27b-8399-4fa1-9415-6b22b5c01375": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 15:40:14",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "70d7e148-3a8c-494b-9183-638722de082b": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 16:55:08",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "7740bc2f-a407-4b10-aa24-3969317f45c9": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 17:32:31",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "c7056480-8f35-49a7-8bf5-07ed19c62828": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 17:55:34",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "6c12c840-c5e3-49ad-8763-93010372ef57": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 19:06:27",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "ec803d01-62e3-47da-8967-b947cbd00e56": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 19:09:30",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "41e91b5b-da81-4b1c-a65e-f0ef782db0bd": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 19:26:30",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "03712a8d-ca39-4c9e-b16e-0f718fa94a0c": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 19:47:35",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "7ab49ca1-1c5d-46b1-b854-ba247eea4d83": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-15 23:01:32",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "8e7d25f6-4340-48f4-b055-c2afa3c95535": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 09:49:24",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "0057dec9-3dae-4483-af0e-1ba5e6f153c0": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 09:49:25",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "be45698e-f947-4ea7-9562-a9b5fbadf003": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 09:49:29",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "62d8e7b1-60d2-4cde-a575-bb332054c17a": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 09:53:44",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "0dd847e8-1f03-4b01-8f91-37beb583be18": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 10:02:54",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "10972345-2ecd-4a7e-bac6-f40c73dfe9b1": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 11:12:40",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "d127359f-c2da-4f8c-897c-004ae63cbfaa": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 11:48:21",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "c54be92f-be85-46fc-9f35-34e35d363fc9": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-09-16 14:10:34",
+        "estimated_delivery": {
+          "days": 2,
+          "hours": 48
+        }
+      }
+    ],
+    "44b66b7a-e75c-4560-afed-ca3c6d309de0": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-10-02 09:33:16",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "3c496c59-a70a-40a2-80ba-c9a6ff2eef8a": [
+      {
+        "role": "Farmer",
+        "timestamp": "2025-10-02 09:35:03",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "d6badcfb-04ce-415a-9ec8-b6c9cbee1ac9": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 07:54:26",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "3dda98e1-dc99-4337-b8e6-4fc3dba76aac": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 07:59:11",
+        "estimated_delivery": {
+          "days": 3,
+          "hours": 72
+        }
+      }
+    ],
+    "9bf4d9a1-0b29-4758-a0fe-e515cb562777": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 08:00:30",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "660a3f34-4097-4bd3-8edd-e1baaf7f66d1": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 08:00:32",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "586d9875-ea95-4411-9ed4-4402821b5fc0": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 08:00:32",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "f08882d6-fe43-4f9e-8deb-086e54cb8621": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 08:04:10",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ],
+    "8477de9b-8e09-4959-be3f-6d7cf65fb8ac": [
+      {
+        "role": "Farmer",
+        "timestamp": "2026-04-14 08:04:11",
+        "estimated_delivery": {
+          "days": 1,
+          "hours": 24
+        }
+      }
+    ]
+  }
+}

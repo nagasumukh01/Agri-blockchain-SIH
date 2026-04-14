@@ -1,0 +1,263 @@
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import LabelEncoder
+import joblib
+import os
+from datetime import datetime
+
+class CropPricePredictor:
+    def __init__(self):
+        self.stage_models = {}
+        self.encoders = {
+            'crop': LabelEncoder(),
+            'quality': LabelEncoder(),
+            'location': LabelEncoder(),
+            'stage': LabelEncoder()
+        }
+        self.models_path = "crop_price_models.joblib"
+        self.encoders_path = "encoders.joblib"
+        self.price_history = {}  # Track prices through supply chain
+        self._load_or_train_models()
+
+    def _load_or_train_model(self):
+        """Load existing models or train new ones if don't exist"""
+        if os.path.exists(self.model_path) and os.path.exists(self.encoders_path):
+            self._load_model()
+        else:
+            self._train_model()
+
+    def _load_model(self):
+        """Load trained models and encoders"""
+        models = joblib.load(self.model_path)
+        self.farmer_model = models['farmer']
+        self.distributor_model = models['distributor']
+        self.retailer_model = models['retailer']
+        
+        encoders = joblib.load(self.encoders_path)
+        self.crop_encoder = encoders['crop']
+        self.quality_encoder = encoders['quality']
+        self.location_encoder = encoders['location']
+        self.stage_encoder = encoders['stage']
+
+    def _train_models(self):
+        """Train new models for each supply chain stage"""
+        # Create sample training data
+        crops = ['rice', 'wheat', 'corn', 'potato', 'tomato', 'onion', 'carrot', 'beans', 'peas', 'garlic']
+        qualities = ['A', 'B', 'C']
+        locations = ['urban', 'suburban', 'rural']
+        stages = ['farmer', 'distributor', 'retailer']
+
+        # Base price ranges for different crops
+        base_price_ranges = {
+            'rice': (20, 30),
+            'wheat': (15, 25),
+            'corn': (10, 20),
+            'potato': (8, 15),
+            'tomato': (15, 25),
+            'onion': (12, 22),
+            'carrot': (10, 18),
+            'beans': (18, 28),
+            'peas': (20, 30),
+            'garlic': (25, 35)
+        }
+
+        # Generate synthetic data
+        training_data = []
+        for _ in range(1000):  # 1000 base examples
+            # Generate basic parameters
+            crop = np.random.choice(crops)
+            quality = np.random.choice(qualities)
+            quantity = np.random.uniform(100, 2000)
+            month = np.random.randint(1, 13)
+            location = np.random.choice(locations)
+            
+            # Get base price for farmer
+            base_min, base_max = base_price_ranges[crop]
+            farmer_base = np.random.uniform(base_min, base_max)
+            
+            # Quality adjustments
+            quality_factors = {'A': 1.2, 'B': 1.0, 'C': 0.8}
+            quality_adjusted_base = farmer_base * quality_factors[quality]
+            
+            # Location adjustments
+            location_factors = {'urban': 1.1, 'suburban': 1.0, 'rural': 0.9}
+            location_adjusted_base = quality_adjusted_base * location_factors[location]
+            
+            # Generate data for each stage in the supply chain
+            for stage in stages:
+                current_price = location_adjusted_base
+                
+                if stage == 'distributor':
+                    # Add distributor costs and markup
+                    transport_cost = np.random.uniform(1.5, 3.0)
+                    storage_cost = np.random.uniform(0.5, 1.5)
+                    markup = np.random.uniform(0.15, 0.25)
+                    current_price = current_price * (1 + markup) + transport_cost + storage_cost
+                elif stage == 'retailer':
+                    # Add retailer costs and markup
+                    operational_cost = np.random.uniform(2.0, 4.0)
+                    markup = np.random.uniform(0.20, 0.35)
+                    current_price = current_price * (1 + markup) * 1.2 + operational_cost
+                
+                # Add quantity discount if applicable
+                if quantity > 1000:
+                    current_price *= 0.9  # 10% discount
+                elif quantity > 500:
+                    current_price *= 0.95  # 5% discount
+                
+                # Add to training data
+                training_data.append([
+                    crop,
+                    quality,
+                    location,
+                    quantity,
+                    month,
+                    stage,
+                    round(current_price, 2)
+                ])
+                
+        # Create DataFrame from training data
+        df = pd.DataFrame(training_data, columns=[
+            'crop', 'quality', 'location', 'quantity',
+            'month', 'stage', 'price'
+        ])
+        
+        # Encode categorical variables
+        df['crop_encoded'] = self.crop_encoder.fit_transform(df['crop'])
+        df['quality_encoded'] = self.quality_encoder.fit_transform(df['quality'])
+        df['location_encoded'] = self.location_encoder.fit_transform(df['location'])
+        df['stage_encoded'] = self.stage_encoder.fit_transform(df['stage'])
+        
+        # Train separate model for each stage
+        self.stage_models = {}
+        for stage in stages:
+            stage_data = df[df['stage'] == stage]
+            X = stage_data[[
+                'crop_encoded', 'quality_encoded',
+                'location_encoded', 'quantity', 'month'
+            ]]
+            y = stage_data['price']
+            
+            model = RandomForestRegressor(
+                n_estimators=100,
+                random_state=42
+            )
+            model.fit(X, y)
+            self.stage_models[stage] = model
+        
+        # Save models and encoders
+        joblib.dump(self.stage_models, self.model_path)
+        joblib.dump({
+            'crop': self.crop_encoder,
+            'quality': self.quality_encoder,
+            'location': self.location_encoder,
+            'stage': self.stage_encoder
+        }, self.encoders_path)
+            
+                # Apply quality factor first
+                quality_factors = {'A': 1.2, 'B': 1.0, 'C': 0.8}
+                quality_adjusted_base = farmer_base * quality_factors[quality]
+                
+                # Calculate stage-specific prices
+                if stage == 'farmer':
+                    price = quality_adjusted_base
+                elif stage == 'distributor':
+                    # Distributor adds transport, storage costs and markup (15-25%)
+                    transport_cost = np.random.uniform(1.5, 3.0)
+                    storage_cost = np.random.uniform(0.5, 1.5)
+                    markup = np.random.uniform(0.15, 0.25)
+                    price = quality_adjusted_base * (1 + markup) + transport_cost + storage_cost
+                else:  # retailer
+                    # Retailer adds operational costs and markup (20-35%)
+                    operational_cost = np.random.uniform(2.0, 4.0)
+                    markup = np.random.uniform(0.20, 0.35)
+                    price = quality_adjusted_base * (1 + markup) * 1.2 + operational_cost  # Extra 20% for retail markup
+                
+                # Apply location factor
+                location_factors = {'urban': 1.1, 'suburban': 1.0, 'rural': 0.9}
+                price *= location_factors[location]
+            price *= location_factors[location]
+            
+            # Add quantity discount
+            if quantity > 1000:
+                price *= 0.9
+            elif quantity > 500:
+                price *= 0.95
+                
+            # Add seasonal variation
+            seasonal_factor = 1 + 0.1 * np.sin(2 * np.pi * month / 12)
+            price *= seasonal_factor
+            
+            # Add some random noise
+            price *= np.random.uniform(0.95, 1.05)
+            
+            data.append([crop, quality, location, quantity, month, price])
+
+        # Create DataFrame
+        df = pd.DataFrame(data, columns=['crop', 'quality', 'location', 'quantity', 'month', 'price'])
+
+        # Encode categorical variables
+        df['crop_encoded'] = self.crop_encoder.fit_transform(df['crop'])
+        df['quality_encoded'] = self.quality_encoder.fit_transform(df['quality'])
+        df['location_encoded'] = self.location_encoder.fit_transform(df['location'])
+
+        # Prepare features
+        X = df[['crop_encoded', 'quality_encoded', 'location_encoded', 'quantity', 'month']]
+        y = df['price']
+
+        # Train model
+        self.model = RandomForestRegressor(n_estimators=100, random_state=42)
+        self.model.fit(X, y)
+
+        # Save model and encoders
+        joblib.dump(self.model, self.model_path)
+        encoders = {
+            'crop': self.crop_encoder,
+            'quality': self.quality_encoder,
+            'location': self.location_encoder
+        }
+        joblib.dump(encoders, self.encoders_path)
+
+    def predict_price(self, crop, quality, location, quantity):
+        """Predict price for given crop details"""
+        try:
+            # Handle new crops by adding to encoder
+            if crop not in self.crop_encoder.classes_:
+                old_classes = list(self.crop_encoder.classes_)
+                new_classes = old_classes + [crop]
+                self.crop_encoder.fit(new_classes)
+
+            # Encode input features
+            crop_encoded = self.crop_encoder.transform([crop])[0]
+            quality_encoded = self.quality_encoder.transform([quality])[0]
+            location_encoded = self.location_encoder.transform([location])[0]
+            current_month = datetime.now().month
+
+            # Make prediction
+            features = [[crop_encoded, quality_encoded, location_encoded, quantity, current_month]]
+            predicted_price = self.model.predict(features)[0]
+
+            return max(predicted_price, 0)  # Ensure non-negative price
+
+        except Exception as e:
+            print(f"Prediction error: {e}")
+            # Fallback to basic price calculation
+            base_price = 20  # Default base price
+            quality_factors = {'A': 1.2, 'B': 1.0, 'C': 0.8}
+            location_factors = {'urban': 1.1, 'suburban': 1.0, 'rural': 0.9}
+            
+            price = base_price
+            price *= quality_factors.get(quality, 1.0)
+            price *= location_factors.get(location.lower(), 1.0)
+            
+            if quantity > 1000:
+                price *= 0.9
+            elif quantity > 500:
+                price *= 0.95
+                
+            return price
+
+    def get_supported_crops(self):
+        """Get list of crops the model has been trained on"""
+        return list(self.crop_encoder.classes_)

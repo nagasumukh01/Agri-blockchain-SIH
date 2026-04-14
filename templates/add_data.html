@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Add Supply Chain Data</h2>
+    <form method="post">
+        <label>Role:</label>
+        <select name="role">
+            <option value="Farmer">Farmer</option>
+            <option value="Distributor">Distributor</option>
+            <option value="Retailer">Retailer</option>
+        </select>
+
+        <label>Details:</label>
+        <input type="text" name="details" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
+

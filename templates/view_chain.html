@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Supply Chain Explorer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='supply_chain.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body class="container mt-4">
+  <h2 class="text-center text-primary mb-4">🌾 Agricultural Supply Chain Explorer</h2>
+
+  {% for block in chain %}
+    <div class="card shadow">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Block #{{ block['index'] }}</span>
+        <small class="text-muted">{{ block['timestamp'] }}</small>
+      </div>
+      <div class="card-body">
+        {% if block['transactions'] %}
+          {% for transaction in block['transactions'] %}
+            <div class="transaction-details">
+              <div class="d-flex align-items-center mb-3">
+                <span class="stage-badge stage-{{ transaction['role'] }}">{{ transaction['role'] }}</span>
+                {% if transaction.get('product_id') %}
+                  <span class="ms-3">Product ID: {{ transaction['product_id'][:8] }}...</span>
+                {% endif %}
+              </div>
+
+              <!-- Stage Progress Indicator -->
+              <div class="stage-progress">
+                {% set stages = ['Farmer', 'Distributor', 'Retailer', 'Consumer'] %}
+                {% set current_stage = transaction['role'] %}
+                {% for stage in stages %}
+                  <div class="stage-point {% if stages.index(stage) < stages.index(current_stage) %}completed{% elif stage == current_stage %}active{% endif %}">
+                    <span class="stage-label">{{ stage }}</span>
+                  </div>
+                  {% if not loop.last %}
+                    <div class="stage-line {% if stages.index(stage) < stages.index(current_stage) %}completed{% endif %}"></div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              
+              {% if transaction.get('details') %}
+                <div class="mb-3">
+                  <strong>Transaction Details:</strong>
+                  {% if transaction['details'] is mapping %}
+                    <ul class="list-unstyled">
+                      {% for key, value in transaction['details'].items() %}
+                        <li><strong>{{ key|title }}:</strong> {{ value }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <p>{{ transaction['details'] }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if transaction.get('price_info') %}
+                <div class="price-progression">
+                  <h6 class="mb-3">Price Information</h6>
+                  {% if transaction['role'] == 'Farmer' %}
+                    <div class="d-flex align-items-center">
+                      <span>Base Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }} per kg</span>
+                    </div>
+                    {% if transaction['price_info'].get('total_price') %}
+                      <div class="mt-2">
+                        <span>Total Value: ${{ "%.2f"|format(transaction['price_info']['total_price']) }}</span>
+                      </div>
+                    {% endif %}
+                  {% elif transaction['role'] == 'Distributor' %}
+                    <div class="d-flex align-items-center flex-wrap">
+                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info']['original_price']) }}</span>
+                      <span class="price-arrow">➜</span>
+                      <span>Selling Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }}</span>
+                      <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info']['markup_percentage']) }}%)</span>
+                    </div>
+                    <div class="mt-2 small">
+                      <span>Transport Cost: ${{ "%.2f"|format(transaction['price_info']['transport_cost']) }}</span>
+                      <span class="mx-2">|</span>
+                      <span>Storage Cost: ${{ "%.2f"|format(transaction['price_info']['storage_cost']) }}</span>
+                    </div>
+                  {% elif transaction['role'] == 'Retailer' %}
+                    <div class="d-flex align-items-center flex-wrap">
+                      <span>Purchase Price: ${{ "%.2f"|format(transaction['price_info']['original_price']) }}</span>
+                      <span class="price-arrow">➜</span>
+                      <span>Retail Price: ${{ "%.2f"|format(transaction['price_info']['price_per_kg']) }}</span>
+                      {% if transaction['price_info'].get('markup_percentage') %}
+                        <span class="price-change ms-2">(+{{ "%.1f"|format(transaction['price_info']['markup_percentage']) }}%)</span>
+                      {% endif %}
+                    </div>
+                    <div class="mt-2 small">
+                      <span>Additional Costs: ${{ "%.2f"|format(transaction['price_info']['additional_costs']) }}</span>
+                      {% if transaction['price_info'].get('final_selling_price') %}
+                        <span class="mx-2">|</span>
+                        <span>Final Selling Price: ${{ "%.2f"|format(transaction['price_info']['final_selling_price']) }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if transaction.get('estimated_delivery') %}
+                <div class="mt-3 small">
+                  <strong>Estimated Delivery:</strong>
+                  {{ transaction['estimated_delivery']['days'] }} days
+                  ({{ transaction['estimated_delivery']['hours'] }} hours)
+                </div>
+              {% endif %}
+
+              {% if transaction.get('product_id') %}
+                <div class="d-flex justify-content-between align-items-center mt-3" data-product-id="{{ transaction['product_id'] }}" data-canvas-id="qr-{{ block['index'] }}-{{ loop.index }}">
+                  <a href="/track?id={{ transaction['product_id'] }}" class="btn btn-sm btn-primary">
+                    <span class="d-none d-sm-inline">View</span> Product Journey
+                  </a>
+                  <canvas id="qr-{{ block['index'] }}-{{ loop.index }}" class="qr-code"></canvas>
+                </div>
+              {% endif %}
+            </div>
+            {% if not loop.last %}<hr>{% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <div class="hash-info mt-3">
+          <small><strong>Block Hash:</strong> {{ block['hash'] }}</small><br>
+          <small><strong>Previous Block Hash:</strong> {{ block['previous_hash'] }}</small>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  <div class="text-center mt-3 mb-4">
+    <a href="/" class="btn btn-secondary">🏠 Back to Home</a>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('[data-product-id]').forEach(function(container) {
+        const productId = container.dataset.productId;
+        const canvasId = container.dataset.canvasId;
+        const canvas = document.getElementById(canvasId);
+
+        if (!productId || !canvas) {
+          return;
+        }
+
+        new QRious({
+          element: canvas,
+          value: window.location.origin + '/track?id=' + encodeURIComponent(productId),
+          size: 120
+        });
+      });
+    });
+  </script>
+</body>
+</html>

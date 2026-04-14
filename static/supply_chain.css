@@ -1,0 +1,164 @@
+.price-progression {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #e9ecef;
+}
+
+.price-arrow {
+    color: #28a745;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.stage-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.stage-Farmer {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.stage-Distributor {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.stage-Retailer {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.stage-Consumer {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.price-change {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.stage-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    padding: 0 20px;
+}
+
+.stage-point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #007bff;
+    position: relative;
+    z-index: 2;
+}
+
+.stage-point.active {
+    background: #007bff;
+}
+
+.stage-point.completed {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.stage-line {
+    height: 2px;
+    background: #dee2e6;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.stage-line.completed {
+    background: #28a745;
+}
+
+.stage-label {
+    position: absolute;
+    top: 25px;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+/* Base styles */
+body {
+    background: #f8f9fa;
+}
+
+.card {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    font-weight: bold;
+    background-color: #f1f8ff;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+}
+
+.transaction-details {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.hash-info {
+    font-family: monospace;
+    word-break: break-all;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .transaction-details {
+        padding: 10px;
+    }
+    
+    .stage-progress {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    
+    .stage-point {
+        margin: 10px 0;
+    }
+    
+    .stage-line {
+        width: 2px;
+        height: 20px;
+        margin: 5px 9px;
+    }
+    
+    .stage-label {
+        position: relative;
+        top: auto;
+        transform: none;
+        margin-left: 30px;
+        margin-top: -25px;
+    }
+    
+    .price-progression {
+        padding: 10px;
+    }
+}

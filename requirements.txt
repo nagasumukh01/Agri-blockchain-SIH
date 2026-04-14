@@ -1,0 +1,9 @@
+flask
+flask-cors
+qrcode
+pillow
+pandas
+numpy
+joblib
+scikit-learn
+requests  # For weather API

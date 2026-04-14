@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distributor Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='supply_chain.css') }}">
+</head>
+<body class="container mt-4">
+  <h2 class="text-primary">🚚 Distributor Portal</h2>
+  
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Instructions</h5>
+      <p class="card-text">
+        1. Enter the Product ID from the farmer's QR code<br>
+        2. Fill in transport and warehouse details<br>
+        3. Submit to generate your QR code and add to blockchain
+      </p>
+    </div>
+  </div>
+
+  <form method="POST" class="mt-3">
+    <div class="mb-3">
+      <label class="form-label">Product ID (from Farmer's QR)</label>
+      <input type="text" name="product_id" class="form-control" required 
+             placeholder="Enter the product ID from farmer's QR code">
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Transport Type</label>
+        <select name="transport" class="form-control" required>
+          <option value="" disabled selected>Select transport type</option>
+          <option value="truck">Truck</option>
+          <option value="van">Van</option>
+          <option value="refrigerated">Refrigerated Transport</option>
+        </select>
+      </div>
+      
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Warehouse Location</label>
+        <select name="location" class="form-control" required>
+          <option value="" disabled selected>Select location type</option>
+          <option value="urban">Urban Center</option>
+          <option value="suburban">Suburban Area</option>
+          <option value="rural">Rural Area</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Warehouse Name</label>
+      <input type="text" name="warehouse" class="form-control" required
+             placeholder="Enter warehouse name or identifier">
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-qr-code"></i> Process & Generate QR
+      </button>
+      <a href="/chain" class="btn btn-outline-secondary">View Blockchain</a>
+    </div>
+  </form>
+
+  {% if error %}
+    <div class="alert alert-danger mt-4">
+      {{ error }}
+    </div>
+  {% endif %}
+
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-link">🏠 Back to Home</a>
+  </div>
+
+</body>
+</html>
